@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>E-Books</title>
+    <!-- Links -->
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Slide JS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css'
+        integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+    <!-- CSS Link -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- API Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="topNav" id="myTopNav">
+            <a class="active" href="index.html">
+                <i class="fa fa-fw fa-book-reader icons"></i>Home
+            </a>
+            <a href="#eBook">
+                <i class="fa fa-fw fa-book-open icons"></i>E-Book
+            </a>
+            <a href="#note">
+                <i class="fa fa-fw fa-edit icons"></i>Note
+            </a>
+            <a class="flip" id="bookmark">
+                <i class="fa fa-fw fa-bookmark icons"></i>
+            </a>
+
+            <button id="searchModal" type="submit">
+                <i class="fa fa-search" title="Search"></i>
+            </button>
+
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- saved -->
+    <div class="panel">
+        <h2>Save your favorite titles</h2>
+        <a target="_blank" href="https://drive.google.com/open?id=1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu">
+            <img id="1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu" style=" width:200px">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/open?id=1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE">
+            <img id="1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE" style=" width:200px">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/open?id=1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL">
+            <img id="1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL" style=" width:200px">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/open?id=1FA1ng5_rVW6M2E11D0BQ6lx8xBzBz4UT">
+            <img id="1FA1ng5_rVW6M2E11D0BQ6lx8xBzBz4UT" style=" width:200px">
+        </a>
+        <br>
+
+        <div id="saveBook"></div>
+    </div>
+
+    <!--Main Column Content -->
+
+    <!-- Slide Content -->
+    <section>
+        <div class="slideShow-container">
+
+            <div class="mySlides">
+                <q>I have not failed. <br> I've just found 10,000 ways that won't work.</q>
+                <p class="author">- Thomas A. Edison</p>
+            </div>
+
+            <div class="mySlides">
+                <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+                <p class="author">- John Keats</p>
+            </div>
+
+            <div class="mySlides">
+                <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+                <p class="author">- Ernest Hemingway</p>
+            </div>
+
+            <span></span>
+            <a class="prev" onclick="plusSlides(-1)" title="Prev"><img src="img/prev-slide.png" alt="" /> </a>
+            <a class="next" onclick="plusSlides(1)" title="Next"><img src="img/next-slide.png" alt="" /></a>
+
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)" title="First"></span>
+            <span class="dot" onclick="currentSlide(2)" title="Second"></span>
+            <span class="dot" onclick="currentSlide(3)" title="Third"></span>
+        </div>
+    </section>
+
+    <section>
+        <h1 id="eBook">E-Book</h1>
+        <div class="row">
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="img/qwe.jpg" alt="ჯ.რ.რ. ტოლკინი სილმარილიონი">
+                    </div>
+
+                    <div class="flip-card-back">
+                        <a target="_blank" href="https://drive.google.com/open?id=1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu">
+                            <br>
+                            <h3>Read this Book</h3>
+                        </a>
+                        <hr>
+
+                        <h3>ჯ.რ.რ. ტოლკინი</h3>
+                        <p>სილმარილიონი</p>
+
+                        <div class="download">
+                            <a
+                                href="https://drive.google.com/uc?authuser=0&id=1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu&export=download">
+                                <i class="fa fa-download"> Download</i>
+                            </a>
+                        </div>
+
+                        <div class="saveIcon">
+                            <div class="changeIcon">
+                                <span
+                                    onclick='document.getElementById("1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu").src = "img/qwe.jpg"'
+                                    class="far fa-bookmark icon1" title="Save Book">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="img/tr.jpg" alt="ერიხ მარია რემარკი ტრიუმფალური თაღი">
+                    </div>
+
+                    <div class="flip-card-back">
+
+                        <a target="_blank" href="https://drive.google.com/open?id=1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE">
+                            <br>
+                            <h3>Read this Book</h3>
+                        </a>
+                        <hr>
+
+                        <h3>ერიხ მარია რემარკი</h3>
+                        <p>ტრიუმფალური თაღი</p>
+
+                        <div class="download">
+                            <a
+                                href="https://drive.google.com/uc?authuser=0&id=1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE&export=download">
+                                <i class="fa fa-download"> Download</i>
+                            </a>
+                        </div>
+
+                        <div class="saveIcon">
+                            <div class="changeIcon">
+                                <span
+                                    onclick='document.getElementById("1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE").src = "img/tr.jpg"'
+                                    class="far fa-bookmark icon1" title="Save Book">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="img/fd.jpg" alt="ფიოდორ დოსტოევსკი ეშმაკნი">
+                    </div>
+
+
+                    <div class="flip-card-back">
+                        <a target="_blank" href="https://drive.google.com/open?id=1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL">
+                            <br>
+                            <h3>Read this Book</h3>
+                        </a>
+                        <hr>
+
+                        <h3>ფიოდორ დოსტოევსკი</h3>
+                        <p>ეშმაკნი</p>
+
+                        <div class="download">
+                            <a
+                                href="https://drive.google.com/uc?authuser=0&id=1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL&export=download">
+                                <i class="fa fa-download"> Download</i>
+                            </a>
+                        </div>
+
+                        <div class="saveIcon">
+                            <div class="changeIcon">
+                                <span
+                                    onclick='document.getElementById("1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL").src = "img/fd.jpg"'
+                                    class="far fa-bookmark icon1" title="Save Book">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="img/rm.jpg" alt="ერიხ მარია რემარკი ჟამი სიცოცხლისა და ჟამი სიკვდილისა">
+                    </div>
+
+                    <div class="flip-card-back">
+                        <a target="_blank" href="https://drive.google.com/open?id=1FA1ng5_rVW6M2E11D0BQ6lx8xBzBz4UT">
+
+                            <br>
+                            <h3>Read this Book</h3>
+                        </a><br>
+
+                        <h3>ერიხ მარია რემარკი</h3>
+                        <p>ჟამი სიცოცხლისა და ჟამი სიკვდილისა</p>
+
+                        <div class="download">
+                            <a
+                                href="https://drive.google.com/uc?authuser=0&id=1uDVchp_Hgc92VfhUKINIqHqYpw6M8dm7&export=download">
+                                <i class="fa fa-download"> Download</i>
+                            </a>
+                        </div>
+
+                        <div class="saveIcon">
+                            <div class="changeIcon">
+                                <span
+                                    onclick='document.getElementById("1FA1ng5_rVW6M2E11D0BQ6lx8xBzBz4UT").src = "img/rm.jpg"'
+                                    class="far fa-bookmark icon1" title="Save Book"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h1 id="note">Note</h1>
+        <div class="note-cont">
+            <form>
+                <fieldset>
+                    <i class="fa fa-fw fa-edit noteIcon"></i>
+                    <i class="fa fa-fw fa-edit noteIcon"></i>
+                    <i class="fa fa-fw fa-edit noteIcon"></i> <br>
+                    <textarea id="text" placeholder="Write Something" title="Write Notes"></textarea>
+                    <br>
+                    <button type="button" id="save" value="save" title="Save" class="btn btn-primary">Save</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="input">
+            <h1>Your Note</h1>
+            <p id="saved"></p>
+        </div>
+    </section>
+
+
+    <!-- The Modal-->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="closed" title="Close Window">&times;</span>
+            <div class="searchCont">
+                <input id="filter" type="text" placeholder="Search..." title="Write Book's Title or Author"
+                    onclick="searchFunction()">
+                <button id="button" type="button"><i class="fa fa-search" title="Search"></i></button>
+                <div class="APIGallery">
+                    <div id="results"></div>
+                </div>
+            </div>
+            <!-- Modal Gallery -->
+            <div class="column-search">
+                <div id="search" style="display:none">
+
+                    <div class="column" style="margin:5px">
+                        <a target="_blank" href="https://drive.google.com/open?id=1Jbp6DT8rcuA0inNet8CxHVv52aPKT7dE">
+                            <img src="img/tr.jpg" alt="ერიხ მარია რემარკი ტრიუმფალური თაღი">
+                        </a>
+                    </div>
+
+                    <div class="column" style="margin:5px">
+                        <a target="_blank" href="https://drive.google.com/open?id=1jyEwDSSx7FgU_Ju0oGf9BfeY_j35UQAL">
+                            <img src="img/fd.jpg" alt="ფიოდორ დოსტოევსკი ეშმაკნი">
+                        </a>
+                    </div>
+
+                    <div class="column" style="margin:5px">
+                        <a target="_blank" href="https://drive.google.com/open?id=1UW8HeyQ3qCpsG99dzBY2nuFOsmqK-JAu">
+                            <img src="img/qwe.jpg" alt="ჯ.რ.რ. ტოლკინი სილმარილიონი">
+                        </a>
+                    </div>
+
+                    <div class="column" style="margin:5px">
+                        <a target="_blank" href="https://drive.google.com/open?id=1FA1ng5_rVW6M2E11D0BQ6lx8xBzBz4UT">
+                            <img src="img/rm.jpg" alt="ჟამი სიცოცხლისა და ჟამი სიკვდილისა">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Copyright &copy
+            <script>document.write(new Date().getFullYear());</script>
+        </p>
+    </footer>
+
+    <!-- JS Links -->
+    <script src="js/js.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/note.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/searchModal.js"></script>
+
+</body>
+
+</html>
